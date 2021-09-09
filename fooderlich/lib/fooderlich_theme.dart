@@ -51,10 +51,10 @@ class FooderlichTheme {
   static ThemeData light() {
     return ThemeData(
       brightness: Brightness.light,
-      primaryColor: Colors.white,
+      primaryColor: Colors.yellow[800],
       accentColor: Colors.black,
       textSelectionTheme:
-          const TextSelectionThemeData(selectionColor: Colors.green),
+          const TextSelectionThemeData(selectionColor: Colors.orange),
       textTheme: lightTextTheme,
     );
   }
@@ -64,6 +64,8 @@ class FooderlichTheme {
       brightness: Brightness.dark,
       primaryColor: Colors.grey[900],
       accentColor: Colors.green[600],
+      textSelectionTheme:
+          const TextSelectionThemeData(selectionColor: Colors.orange),
       textTheme: darkTextTheme,
     );
   }

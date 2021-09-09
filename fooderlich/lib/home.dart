@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'components/custom_search_delgates.dart';
 import 'screens/explore_screen.dart';
 import 'screens/recipes_screen.dart';
+import 'screens/grocery_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
@@ -15,7 +17,8 @@ class _HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     ExploreScreen(),
     RecipesScreen(),
-    Container(color: Colors.blue)
+    const GroceryScreen(),
+    Search()
   ];
 
   void _onItemTapped(int index) {
@@ -43,6 +46,8 @@ class _HomeState extends State<Home> {
                   icon: Icon(Icons.book), label: 'Recipes'),
               const BottomNavigationBarItem(
                   icon: Icon(Icons.list), label: 'To Buy'),
+              const BottomNavigationBarItem(
+                  icon: Icon(Icons.search), label: 'Search')
             ]));
   }
 }
